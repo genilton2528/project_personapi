@@ -4,14 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import one.digitalinnovation.personapi.entity.Phone;
+import one.digitalinnovation.personapi.model.Phone;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Data
@@ -40,8 +38,10 @@ public class PersonDTO {
     @NotEmpty
     private List<Phone> phones;
 
+/*
     public LocalDate getBirthDateFormatted(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return LocalDate.parse(this.birthDate, formatter);
     }
+*/
 }
